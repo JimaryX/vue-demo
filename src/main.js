@@ -8,10 +8,13 @@ import "@/assets/styles/index.scss";
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import VueRouter from 'vue-router'
+import VueTyper from 'vue-typer'
+import '@/plugins'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(VueRouter)
+Vue.use(VueTyper)
 
 /* eslint-disable no-new */
 new Vue({
