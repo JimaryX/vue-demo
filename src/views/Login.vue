@@ -26,7 +26,7 @@
           <el-button type="primary" style="width:100%;" @click.native.prevent="loginSubmit">登录</el-button>
         </el-form-item>
       </el-form>
-      <div class="typing">
+      <!-- <div class="typing">
         <vue-typer
           :text="describe"
           :preTypeDelay="2000"
@@ -34,7 +34,7 @@
           :preEraseDelay="2000"
           :eraseDelay="1000"
         ></vue-typer>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -44,8 +44,7 @@ export default {
   name: "Login",
   data() {
     var describe = [
-      "这是一个安静的空间 ——Jimary Xia",
-      "希望可以在这里沉淀自己，进而蜕变!"
+      "XXXXXXXXXXXX"
     ];
     return {
       describe,
