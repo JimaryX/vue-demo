@@ -33,11 +33,11 @@ export default {
 </script>
 
 <style scoped>
-/* .svg-icon {
+.svg-icon {
   width: 10px;
   height: 10px;
   vertical-align: -0.15em;
   fill: currentColor;
   overflow: hidden;
-} */
+}
 </style>
