@@ -8,7 +8,7 @@
         label-width="0px"
         class="demo-ruleForm login-container"
       >
-        <svg-icon iconClass="books"></svg-icon>
+        <svg-icon icon-class="books"/>
         <h3 class="title">生活笔记</h3>
         <el-form-item prop="account">
           <el-input type="text" v-model="loginUser.account" auto-complete="off" placeholder="账号" clearable></el-input>
@@ -74,3 +74,63 @@ export default {
   }
 };
 </script>
+<style lang="less" scoped>
+
+.login {
+  width: 100%;
+  height: 100%;
+  background: url("./static/login.jpg") center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  position: fixed;
+
+  .white-area {
+    margin-left: 10%;
+    overflow: hidden;
+    background: #ffffff;
+    width: 80%;
+    height: 100%;
+
+    .login-container {
+      /*box-shadow: 0 0px 8px 0 rgba(0, 0, 0, 0.06), 0 1px 0px 0 rgba(0, 0, 0, 0.02);*/
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      background-clip: padding-box;
+      margin: 80px;
+      padding: 35px 35px 15px 35px;
+      background: #fff;
+      // border: 1px solid #eaeaea;
+      // box-shadow: 0 0 25px #cac6c6;
+      filter: alpha(opacity=50);
+      background-color: rgba(255, 255, 255, 0.3);
+
+      .el-input__inner {
+        background-color: rgba(255, 255, 255, 0);
+      }
+
+      .svg-icon {
+        width: 100px;
+        height: 100px;
+      }
+
+      .title {
+        font-size: 30px;
+        font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑';
+        margin: 0px auto 20px auto;
+        text-align: center;
+        color: #292a2b;
+      }
+
+      .remember {
+        margin: 0px 0px 35px 0px;
+      }
+    }
+
+    .typing {
+      font-size: 30px;
+      width: 100%
+    }
+  }
+}
+</style>
