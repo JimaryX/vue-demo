@@ -74,7 +74,7 @@ export default {
   }
 };
 </script>
-<style lang="less" scoped>
+<style type='text/less' lang="less" scoped>
 
 .login {
   width: 100%;
