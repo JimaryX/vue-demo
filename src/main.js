@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 import VueRouter from 'vue-router'
 import VueTyper from 'vue-typer'
 import './assets/icons'
+import '!style-loader!css-loader!less-loader!./assets/styles/index.less'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
