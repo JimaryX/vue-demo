@@ -85,10 +85,10 @@ export default {
   position: fixed;
 
   .white-area {
-    margin-left: 10%;
+    margin-left: 30%;
     overflow: hidden;
     background: #ffffff;
-    width: 80%;
+    width: 40%;
     height: 100%;
 
     .login-container {
@@ -97,7 +97,7 @@ export default {
       border-radius: 5px;
       -moz-border-radius: 5px;
       background-clip: padding-box;
-      margin: 80px;
+      margin: 10% 5%;
       padding: 35px 35px 15px 35px;
       background: #fff;
       // border: 1px solid #eaeaea;
@@ -110,13 +110,12 @@ export default {
       }
 
       .svg-icon {
-        width: 100px;
-        height: 100px;
+        width: 40px;
       }
 
       .title {
-        font-size: 30px;
-        font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', '微软雅黑';
+        font-size: 20px;
+        font-family: Sans-serif;
         margin: 0px auto 20px auto;
         text-align: center;
         color: #292a2b;

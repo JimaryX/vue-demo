@@ -6,11 +6,17 @@ import Login from '@/views/Login'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
+  routes: [{
+      path: "/",
+      redirect: "/login"
+    },
     {
       path: '/',
+      meta: {
+        auth: false
+      },
       name: 'Login',
-      component: Login
+      component: () => import('@/views/Login')
     }
   ]
 })
