@@ -1,10 +1,23 @@
 const path = require('path')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, './', dir)
 }
 
 module.exports = {
+  baseUrl: '/',
+  devServer: {
+    proxy: {
+      '': {
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+        ws: true,
+        pathRewrite: {
+
+        }
+      }
+    }
+  },
   chainWebpack: config => {
     config.plugin('define').tap(args => {
       const argv = process.argv

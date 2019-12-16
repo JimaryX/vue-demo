@@ -12,6 +12,11 @@ import VueTyper from 'vue-typer'
 import './assets/icons'
 import '!style-loader!css-loader!less-loader!./assets/styles/index.less'
 
+import axios from 'axios';
+Vue.prototype.$axios = axios;
+import QS from 'qs' // axios库中带有 不需要npm安装
+Vue.prototype.qs = QS;
+
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(Vant)
@@ -22,6 +27,8 @@ Vue.use(VueTyper)
 new Vue({
   el: '#app',
   router,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

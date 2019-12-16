@@ -8,10 +8,16 @@
         label-width="0px"
         class="demo-ruleForm login-container"
       >
-        <svg-icon icon-class="books"/>
+        <svg-icon icon-class="books" />
         <h3 class="title">生活笔记</h3>
         <el-form-item prop="account">
-          <el-input type="text" v-model="loginUser.account" auto-complete="off" placeholder="账号" clearable></el-input>
+          <el-input
+            type="text"
+            v-model="loginUser.account"
+            auto-complete="off"
+            placeholder="账号"
+            clearable
+          ></el-input>
         </el-form-item>
         <el-form-item prop="checkPass">
           <el-input
@@ -23,10 +29,15 @@
           ></el-input>
         </el-form-item>
         <el-form-item style="width:100%;">
-          <el-button type="primary" style="width:100%;" @click.native.prevent="loginSubmit">登录</el-button>
+          <el-button
+            type="primary"
+            style="width:100%;"
+            @click.native.prevent="loginSubmit"
+            >登录</el-button
+          >
         </el-form-item>
       </el-form>
-      <!-- <div class="typing">
+      <div class="typing">
         <vue-typer
           :text="describe"
           :preTypeDelay="2000"
@@ -34,18 +45,18 @@
           :preEraseDelay="2000"
           :eraseDelay="1000"
         ></vue-typer>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import { request } from "@/utils/request.js"
+import { log } from 'util';
 export default {
   name: "Login",
   data() {
-    var describe = [
-      "XXXXXXXXXXXX"
-    ];
+    var describe = ["没有梦想的国度，只有向往的生活"];
     return {
       describe,
       loginUser: {
@@ -56,7 +67,10 @@ export default {
   },
   methods: {
     loginSubmit() {
-      if ( this.loginUser.account && this.loginUser.password ) {
+      request("post", "/demo", {a:"a",b:"b"}).then(data => {
+        console.log(data);
+      })
+      if (this.loginUser.account && this.loginUser.password) {
         //login success
         this.$message({
           message: "Login Success",
@@ -74,8 +88,7 @@ export default {
   }
 };
 </script>
-<style type='text/less' lang="less" scoped>
-
+<style type="text/less" lang="less" scoped>
 .login {
   width: 100%;
   height: 100%;
@@ -97,11 +110,9 @@ export default {
       border-radius: 5px;
       -moz-border-radius: 5px;
       background-clip: padding-box;
-      margin: 10% 5%;
+      // margin: 10% 5%;
       padding: 35px 35px 15px 35px;
       background: #fff;
-      // border: 1px solid #eaeaea;
-      // box-shadow: 0 0 25px #cac6c6;
       filter: alpha(opacity=50);
       background-color: rgba(255, 255, 255, 0.3);
 
@@ -127,8 +138,8 @@ export default {
     }
 
     .typing {
-      font-size: 30px;
-      width: 100%
+      font-size: 15px;
+      width: 100%;
     }
   }
 }
