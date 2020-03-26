@@ -51,12 +51,12 @@
 </template>
 
 <script>
-import { request } from "@/utils/request.js"
+// import { request } from "@/utils/request.js"
 import { log } from 'util';
 export default {
   name: "Login",
   data() {
-    var describe = ["没有梦想的国度，只有向往的生活"];
+    var describe = ["梦想的国度，只是我向往的生活"];
     return {
       describe,
       loginUser: {
@@ -67,9 +67,6 @@ export default {
   },
   methods: {
     loginSubmit() {
-      request("post", "/demo", {a:"a",b:"b"}).then(data => {
-        console.log(data);
-      })
       if (this.loginUser.account && this.loginUser.password) {
         //login success
         this.$message({
