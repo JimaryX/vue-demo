@@ -82,6 +82,15 @@ export default {
         return false;
       }
     }
+  },
+  watch: {
+    loginUser: {
+      handler(newUser) {
+        console.log("New: " + JSON.stringify(newUser));
+      },
+      deep: true,
+      immediate: true
+    }
   }
 };
 </script>
