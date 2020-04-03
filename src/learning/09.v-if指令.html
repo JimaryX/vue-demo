@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-if指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" @click="show" value="显示">
+        <input type="button" @click="dis" value="消失">
+        <p v-if="isShow">再说一遍，我不是菜鸟！v-if</p>
+        <p v-show="isShow">再说一遍，我不是菜鸟！v-show</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                isShow: false
+            },
+            methods: {
+                show: function () {
+                    this.isShow =true;
+                },
+                dis: function () {
+                    // if (this.show ==true) {
+                        this.isShow =false;
+                    // } else {
+                    //     alert ("已经消失了，不能再消失了！")
+                    // }
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

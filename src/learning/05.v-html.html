@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-html标签</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-text="message"></p>
+        <p v-html="message"></p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                message:"<a href='https://www.baidu.com/'>这里是百度链接</a>"
+            }
+        })
+    </script>
+</body>
+</html>

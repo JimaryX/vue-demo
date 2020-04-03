@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data数据对象</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <div>
+            {{ person.name }}不是{{ person.sex}}
+        </div>
+        <ul>
+            <li>{{capus[0]}}</li>
+            <li>{{capus[1]}}</li>
+            <li>{{capus[2]}}</li>
+            </ul>
+            <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "在说一遍，我不是菜鸟！",
+                person: {
+                    name: "施勇",
+                    sex: "boy"
+                },
+                capus: ["阳光中学", "宣城中学", "安徽工程大学"]
+            }
+        })
+    </script>
+
+</body>
+
+</html>

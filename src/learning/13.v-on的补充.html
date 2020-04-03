@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on的补充</v-on>
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="我是不是菜鸟" @click="main('宣城','有什么好地方')">
+        <input type="text" @keyup.enter="say">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            methods: {
+                main: function (p1, p2) {
+                    console.log("我施勇不是菜鸟！")
+                    console.log(p1)
+                    console.log(p2)
+                },
+                say: function () {
+                    alert("敬亭山呀！傻逼")
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

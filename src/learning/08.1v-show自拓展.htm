@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片的切换</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="sub">-</button>
+        <span>{{ num }}</span>
+        <button @click="add">+</button>
+        <img src="//www.baidu.com/img/bd_logo1.png" alt="" v-show="num>5">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                num: 5
+            },
+            methods: {
+                sub: function () {
+                    if(this.num>0){
+                    this.num--;
+                    }else{
+                        alert("别点了，到底了！")
+                    }
+                },
+                add() {
+                    if(this.num<10){
+                    this.num++;
+                    }else{
+                        alert("别点了，到顶了！")
+                    }
+                },
+            },
+        })
+    </script>
+</body>
+
+</html>

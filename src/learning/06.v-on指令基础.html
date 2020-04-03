@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-on指令基础</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="v-on指令" v-on:click="doit">
+        <input type="button" value="v-on简写" @click="doit">
+        <input type="button" value="双击事件" @dblclick="doit">
+        <!-- <input type="button" value="移入事件" @monseenter="doit"> -->
+        <h2 @click="changefood">{{ food }}</h2>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                food: "安徽工程"
+            },
+            methods: {
+                doit: function () {
+                    alert("做IT,就是干！！");
+                },
+                changefood: function () {
+                    // console.log(this.food);
+                    this.food+="大学"
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
