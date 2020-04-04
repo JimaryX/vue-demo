@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历</title>
+    <link rel="stylesheet" href="./css/ul.css">
+    <script>
+        window.onload = function(){
+            var arr=[
+                '快过年了，大家可以商量着去哪玩了',
+                '成长就是——将你哭声调成静音的过程',
+                '不管天气怎样，给自己的世界一片晴朗',
+                '生活并不完美，但并不代表它不美',
+                '做好眼前事,珍惜身边人走好脚下路',
+                '什么都可以舍弃,但不可舍弃快乐',
+                '这一生有很多遗憾,也有很多美好',
+                '再烦，也别忘记微笑',
+                '冷暖自知，苦乐在心',
+                '现在事，现在心，随缘即可',
+                '除了生死都是小事',
+                '活在当下，且行且珍惜'
+
+            ]
+           var vm = tab.getElementsByTagName('li');
+           for(i=0;i<vm.length;i++){
+               vm[i].index = i;
+               vm[i].onmouseover = function(){
+                   for(j=0;j<vm.length;j++){
+                       vm[j].id=''
+                   }
+                   this.id = 'active';
+                   text.innerHTML = ' <h2>'+(this.index+1)+'月活动</h2><p>'+arr[this.index]+'</p>'
+               }
+           }
+
+        }
+    </script>
+</head>
+<body>
+    <div id="tab" class="calendar">
+        <ul>
+            <li id="active"><h1>1</h1><p>JAN</p></li>
+            <li><h1>2</h1><p>FER</p></li>
+            <li><h1>3</h1><p>MAR</p></li>
+            <li><h1>4</h1><p>APR</p></li>
+            <li><h1>5</h1><p>MAY</p></li>
+            <li><h1>6</h1><p>JUN</p></li>
+            <li><h1>7</h1><p>JUL</p></li>
+            <li><h1>8</h1><p>AUG</p></li>
+            <li><h1>9</h1><p>SEP</p></li>
+            <li><h1>10</h1><p>OCT</p></li>
+            <li><h1>11</h1><p>NOV</p></li>
+            <li><h1>12</h1><p>DEC</p></li>
+        </ul>
+        <div id="text">
+            <h2>1月活动</h2>
+            <p>快过年了，大家可以商量着去哪玩了</p>
+        </div>
+    </div>
+</body>
+</html>

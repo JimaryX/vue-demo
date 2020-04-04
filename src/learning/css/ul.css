@@ -1,0 +1,31 @@
+.calendar {
+    width: 500px;
+    background: #EEEEEE;
+}
+
+.calendar ul {
+    clear: both;
+    overflow: hidden;
+}
+
+.calendar ul li {
+    width: 48%;
+    height: 100px;
+    margin-bottom: 10px;
+    background: rgb(107, 105, 105);
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin: 1px;
+    font-size: 15px;
+
+}
+
+#text {
+    clear: both;
+    overflow: hidden;
+    text-align: center;
+}
+#active{
+    background:white;
+}
