@@ -35,6 +35,7 @@
             @click.native.prevent="loginSubmit"
             >登录</el-button
           >
+          <router-link to="/vue-demo/src/views/main.vue">跳转</router-link>
         </el-form-item>
       </el-form>
       <div class="typing">
@@ -52,47 +53,47 @@
 
 <script>
 // import { request } from "@/utils/request.js"
-import { log } from 'util';
+import { log } from 'util'
 export default {
-  name: "Login",
-  data() {
-    var describe = ["梦想的国度，只是我向往的生活"];
+  name: 'Login',
+  data () {
+    var describe = ['梦想的国度，只是我向往的生活']
     return {
       describe,
       loginUser: {
-        account: "",
-        password: ""
+        account: '',
+        password: ''
       }
-    };
+    }
   },
   methods: {
-    loginSubmit() {
+    loginSubmit () {
       if (this.loginUser.account && this.loginUser.password) {
-        //login success
+        // login success
         this.$message({
-          message: "Login Success",
-          type: "success"
-        });
+          message: 'Login Success',
+          type: 'success'
+        })
       } else {
-        //login failed
+        // login failed
         this.$message({
-          message: "Login Failed",
-          type: "error"
-        });
-        return false;
+          message: 'Login Failed',
+          type: 'error'
+        })
+        return false
       }
     }
   },
   watch: {
     loginUser: {
-      handler(newUser) {
-        console.log("New: " + JSON.stringify(newUser));
+      handler (newUser) {
+        console.log('New: ' + JSON.stringify(newUser))
       },
       deep: true,
       immediate: true
     }
   }
-};
+}
 </script>
 <style type="text/less" lang="less" scoped>
 .login {

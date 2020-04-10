@@ -1,0 +1,9 @@
+#body{
+    border:  1px solid black;
+    background: #555;
+    width: 480px;
+    height: 50px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
