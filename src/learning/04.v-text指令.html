@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-text指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2 v-text="message+'我真的不是！'"></h2>
+        <h2 v-text="info+'安徽'"></h2>
+        <h2>{{ info+'芜湖' }} 安徽 中国</h2>
+        <h2> </h2>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "再说一遍，我不是菜鸟！",
+                info: "我来自宣城"
+            }
+        })
+    </script>
+</body>
+
+</html>

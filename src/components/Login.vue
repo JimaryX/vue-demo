@@ -16,7 +16,7 @@
     </el-form-item>
     <el-form-item style="width:100%;">
       <el-button type="primary" style="width:100%;" @click.native.prevent="handleSubmit2">登录</el-button>
-      <el-button type="success" @click="jump" style="width:100%;">跳转</el-button>
+      <el-button type="success " style="width:100%;" @click.native.prevent="jump">跳转</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -66,9 +66,6 @@ export default {
         }
       })
     }
-    // jump (){
-
-    // }
   }
 }
 </script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-model指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="message" @keyup.enter="getM">
+        <input type="button" value="修改 ">
+        <h2>{{ message }}</h2>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "再说一遍，我不是菜鸟！"
+            },
+            methods: {
+                getM: function () {
+                    alert(this.message)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

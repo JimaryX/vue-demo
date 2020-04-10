@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-show指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <img src="//www.baidu.com/img/bd_logo1.png" alt="" v-show="isShow">
+        <input type="button" value="改变" @click="changeIsShow">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                isShow: false
+            },
+            methods: {
+                changeIsShow: function () {
+                    this.isShow = !this.isShow;
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>

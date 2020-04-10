@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15.小黑记事本</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <h1>小黑记事本</h1>
+    <div id="app">
+        <ul>
+            <li><input type="text" v-model="message"></li>
+            <li v-for="(item,index) in things">
+                <span>{{ index+1 }}.</span>
+                <label for="">{{ item }}</label>
+            </li>
+
+        </ul>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                message: "好好学习，天天向上",
+                things:
+                    [
+                        "吃饭饭", "睡觉觉"
+                    ],
+                index: 0
+
+            },
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for指令</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in arr">
+                施勇上过的学校：{{ item }}
+            </li>
+        </ul>
+        <h2 v-for="item in city">
+            所在城市：{{ item.name }}
+        </h2>
+        <input type="button" value="添加数据" @click="add">
+        <input type="button" value="移除数据"@click="remove">
+    </div>
+    <script>
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                arr: ["荷塘小学", "丁店初中", "阳光中学", "宣城中学", "安徽工程大学", "南京大学"],
+                city: [
+                    { name: "宣城" },
+                    { name: "芜湖" },
+                    { name: "南京" }
+                ]
+
+            },
+            methods: {
+                add: function () {
+                    this.city.push({ name: "武汉" })
+                },
+                remove: function () {
+                    this.city.shift();
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

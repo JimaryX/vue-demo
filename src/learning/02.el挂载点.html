@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>el:挂载点</title>
+    <Script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></Script>
+</head>
+<body>
+    <div id="app">
+        {{ message }}
+    </div>
+    <script>
+        var vm  = new Vue({
+            el:"#app",
+            data:{
+                message:"再说一遍，我不是菜鸟！"
+            }
+        })
+    </script>
+</body>
+</html>
