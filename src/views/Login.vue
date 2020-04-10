@@ -35,7 +35,7 @@
             @click.native.prevent="loginSubmit"
             >登录</el-button
           >
-          <router-link to="/vue-demo/src/views/main.vue">跳转</router-link>
+          <router-link to="/Demo">跳转</router-link>
         </el-form-item>
       </el-form>
       <div class="typing">

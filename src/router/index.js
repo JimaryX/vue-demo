@@ -17,6 +17,11 @@ export default new Router({
     },
     name: 'Login',
     component: () => import('@/views/Login')
-  }
+  },
+    {
+      path: '/demo',
+      name: 'Demo',
+      component: () => import('@/views/main.vue')
+    }
   ]
 })
