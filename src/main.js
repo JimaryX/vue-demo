@@ -17,11 +17,11 @@ Vue.prototype.$axios = axios;
 import QS from 'qs' // axios库中带有 不需要npm安装
 Vue.prototype.qs = QS;
 
-Vue.config.productionTip = false
-Vue.use(ElementUI)
-Vue.use(Vant)
-Vue.use(VueRouter)
-Vue.use(VueTyper)
+Vue.config.productionTip = false;
+Vue.use(ElementUI);
+Vue.use(Vant);
+Vue.use(VueRouter);
+Vue.use(VueTyper);
 
 /* eslint-disable no-new */
 new Vue({
@@ -31,4 +31,4 @@ new Vue({
     App
   },
   template: '<App/>'
-})
+});
